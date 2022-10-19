@@ -1,0 +1,6 @@
+1- JMP seguir (desplazamiento de 0?)
+2- R0 <- 0xFF
+3- R1 <- 0x11
+4- ADD R0, R1 (0xFF + 0x11 = 0x110) (carry)
+5- JC siguiente (desplazamiento de 0?)
+6- JMP halt

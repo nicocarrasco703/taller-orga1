@@ -1,0 +1,9 @@
+Los cables que tienen X son:
+	- microOrgaSmall: cable de flags
+	- Registers: cable del enableOut en la salida
+	- PC: cable de load
+	- ALU: cable de OP
+	
+
++4a)
+
