@@ -23,4 +23,4 @@
     -----------------JMP halt ------------------------- (2 ciclos) + 6
     
 
-llega a halt en 15 ciclos
+llega a halt en 53 ciclos

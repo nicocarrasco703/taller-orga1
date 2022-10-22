@@ -1,9 +1,57 @@
 Los cables que tienen X son:
-	- microOrgaSmall: cable de flags
-	- Registers: cable del enableOut en la salida
-	- PC: cable de load
-	- ALU: cable de OP
+	i - microOrgaSmall: cable de flags
+	ii- Registers: cable del enableOut en la salida
+	iii- PC: cable de load
+	iv - ALU: cable de OP
+	v - Memory: cable en la salida del registro de address
+	vi - Decode: cable en la entrada del registro de Mem
+	vii - ControlUnit: cable de entrada de la microPC
 	
 
 +4a)
 
+i) en el control unit la entrada de flags no recibe señal por lo tanto no se pueden realizar operaciones que requieran de ellas. ya que hay compuertas AND que no se activaran aunque se prendan las señales de las microOp
+
+ii) no habra salida de los registros (hi-z)
+
+iii) no se podra cargar la dirección de la instruccion
+
+iv) no se pueden utilizar los multiplexores de las flags ni de la seleccion de operaciones
+
+v) no se puede seleccionar el adress en la memoria
+
+vi) no se pueden utilizar instrucciones del tipo c y d
+
+vii) no se podra utilizar el microPC
+
+4b)
+
+i) las flags valdran siempre 0
+
+ii) no se habilitara la salida de registros
+
+iii) no se podran cargar las direcciones de instruccion en el pc
+
+iv) en el registro de alu_out si el cable de op esta siempre en 0000 los pulsos del clock no tendran efecto, en los multiplexores siempre se seleccionara la opcion 0000
+
+v) el address siempre será el 00000000
+
+vi) -
+
+vii) el micropc nunca aumentara (queda en 000)
+
+4c)
+
+i) las flags siempre valdran 1
+
+ii) siempre estara habilitada la salida de registros
+
+iii) siempre estará habilitada la carga de direcciones en el pc
+
+iv) se guarda la constante 0xFF en alu_out, las flags siempre serán 0
+
+v) el address siempre será el 1111111
+
+vi) -
+
+vii) el micro siempre será 111
