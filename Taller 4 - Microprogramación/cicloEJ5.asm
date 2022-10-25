@@ -1,4 +1,4 @@
-SET R0, n
+SET R0, 0x05
 SET R1, 0x00
 
 ciclo:
@@ -7,4 +7,5 @@ DEC R0
 JZ fin
 JMP ciclo
 
-fin: instruccion invalida
+fin: 
+JMP fin

@@ -1,26 +1,26 @@
     PC_load DE_enOutImm
     reset_microOp
-    ------------- JMP seguir ------------------- (2 ciclos) + 6
+    ------------- JMP seguir ------------------- (2 ciclos) + 5
     DE_enOutImm RB_enIn
     reset_microOp
-    ------------- SET R0, 0xFF ----------------- (2 ciclos) + 6
+    ------------- SET R0, 0xFF ----------------- (2 ciclos) + 5
     DE_enOutImm RB_enIn
     reset_microOp
-    ------------- SET R1, 0x11 ----------------- (2 ciclos) + 6
+    ------------- SET R1, 0x11 ----------------- (2 ciclos) + 5
     RB_enOut  ALU_enA  RB_selectIndexOut=0
     RB_enOut  ALU_enB  RB_selectIndexOut=1
     ALU_OP=ADD ALU_opW
     RB_enIn   ALU_enOut RB_selectIndexIn=0
     reset_microOp
-    ------------- ADD R0, R1 -------------------- (5 ciclos) + 6 
+    ------------- ADD R0, R1 -------------------- (5 ciclos) + 5
     JC_microOp load_microOp
     reset_microOp
     DE_enOutImm PC_load
     reset_microOp
-    --------------- JC siguiente ------------ (4 ciclos) + 6
+    --------------- JC siguiente ------------ (4 ciclos) + 5
     PC_load DE_enOutImm
     reset_microOp
-    -----------------JMP halt ------------------------- (2 ciclos) + 6
+    -----------------JMP halt ------------------------- (2 ciclos) + 5
     
 
-llega a halt en 53 ciclos
+llega a halt en 47 ciclos

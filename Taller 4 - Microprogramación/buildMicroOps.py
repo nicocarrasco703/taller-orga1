@@ -52,7 +52,7 @@ ALUops = {
     "SHR": 8,
     "SHL": 9,
     "RESERVED10": 10,
-    "RESERVED11": 11,
+    "MIX": 11,
     "cte0x00": 12,
     "cte0x01": 13,
     "cte0x02": 14,

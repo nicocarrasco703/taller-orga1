@@ -1,0 +1,7 @@
+      |00| SET R0 , 0x05
+      |02| SET R1 , 0x00
+ciclo |04| ADD R1 , R0
+      |06| DEC R0
+      |08| JZ fin
+      |0a| JMP ciclo
+  fin |0c| JMP fin

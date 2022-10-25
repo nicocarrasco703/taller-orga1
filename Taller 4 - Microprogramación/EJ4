@@ -36,7 +36,7 @@ iv) en el registro de alu_out si el cable de op esta siempre en 0000 los pulsos 
 
 v) el address siempre será el 00000000
 
-vi) -
+vi) para las instrucciones que requieran ingresar una direccion de memoria o valor inmediato, siempre será 00000000
 
 vii) el micropc nunca aumentara (queda en 000)
 
@@ -52,6 +52,6 @@ iv) se guarda la constante 0xFF en alu_out, las flags siempre serán 0
 
 v) el address siempre será el 1111111
 
-vi) -
+vi) para las instrucciones que requieran ingresar una direccion de memoria o valor inmediato, siempre será 11111111
 
 vii) el micro siempre será 111
