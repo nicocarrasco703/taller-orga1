@@ -6,7 +6,15 @@
     MM_enOut DE_loadL PC_inc
     load_microOp
     reset_microOp
-    reset_microOp ; COMPLETAR
+    ALU_OP=cte0xFF 
+    ALU_enOut MM_enAddr 
+    PC_enOut MM_load
+    IC_cli
+    IC_inta
+    ALU_OP=cte0x00
+    ALU_enOut MM_enAddr
+    MM_enOut PC_load
+    reset_microOp
 
 00001: ; ADD
     RB_enOut  ALU_enA  RB_selectIndexOut=0
@@ -158,13 +166,19 @@
     reset_microOp
 
 11100: ; STI
-    reset_microOp ; COMPLETAR
+    IC_sti
+    reset_microOp
 
 11101: ; CLI
-    reset_microOp ; COMPLETAR
+    IC_cli
+    reset_microOp
 
 11110: ; IRET
-    reset_microOp ; COMPLETAR
+    ALU_OP=cte0xFF 
+    ALU_enOut MM_enAddr 
+    MM_enOut PC_load
+    IC_sti
+    reset_microOp
 
 11111: ; SET
     DE_enOutImm RB_enIn
